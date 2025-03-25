@@ -24,21 +24,15 @@ def index():
 @app.route('/charadas', methods=['GET'])
 def charada():
     charada = random.choice(charadas)
-    return charada
+    return jsonify(charada), 200
 
-@app.route('/charadas/<campo>/<busca>', methods=['GET'])
-def busca(campo, busca):
-    if campo not in ['id', 'pergunta', 'resposta']:
-        return jsonify({'mensagem': 'ERRO - Campo não encontrado.'}), 404
-
-    if campo == 'id':
-        busca = int(busca)
-
+@app.route('/charadas/id/<int:id>', methods=['GET'])
+def busca(id):
     for charada in charadas:
-        if charada[campo] == busca:
+        if charada['id'] == id:
             return jsonify(charada), 200
     else: 
         return jsonify({'mensagem': 'ERRO! Usuário não encontrado.'}), 404
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=5000)
+    app.run()
