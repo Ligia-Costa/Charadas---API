@@ -1,7 +1,9 @@
 from flask import Flask, jsonify
 import random
+from flask_cors import CORS
 
 app = Flask(__name__)
+CORS(app)
 
 charadas = [
     {'id': 1, 'pergunta': 'O que é, o que é? Quanto mais rugas têm mais novo é.', 'resposta': 'O pneu.' },
@@ -35,4 +37,4 @@ def busca(id):
         return jsonify({'mensagem': 'ERRO! Usuário não encontrado.'}), 404
 
 if __name__ == '__main__':
-    app.run()
+    app.run(debug=True)
