@@ -9,7 +9,7 @@ charadas = [
     {'id': 1, 'pergunta': 'O que é, o que é? Quanto mais rugas têm mais novo é.', 'resposta': 'O pneu.' },
     {'id': 2, 'pergunta': 'O que é, o que é? Feito para andar e não anda.', 'resposta': 'A rua.' },
     {'id': 3, 'pergunta': 'O que é, o que é? Dá muitas voltas e não sai do lugar.', 'resposta': 'O relógio.' },
-    {'id': 4, 'pergunta': 'O que uma impressora disse para a outra.', 'resposta': 'Essa folha é tua ou é impressão minha?' },
+    {'id': 4, 'pergunta': 'O que uma impressora disse para a outra?', 'resposta': 'Essa folha é tua ou é impressão minha?' },
     {'id': 5, 'pergunta': 'O que é, o que é? O 4 disse para o 40.', 'resposta': 'Passa a bola.' },
     {'id': 6, 'pergunta': 'O que é, o que é? A esfera disse para o cubo.', 'resposta': 'Deixa de ser quadrado.' },
     {'id': 7, 'pergunta': ' O que é, o que é? O nadador faz para bater o recorde.', 'resposta': 'Nada' },
