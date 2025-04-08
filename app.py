@@ -112,7 +112,7 @@ def excluir_charada(id):
     doc_ref = db.collection('charadas').document(id)
     doc = doc_ref.get()
 
-    if doc.exists:
+    if not doc.exists:
         return jsonify({'mensagem': 'ERRO! Charada não encontrada.'}), 404
     
     doc_ref.delete()
